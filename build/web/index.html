@@ -1,0 +1,139 @@
+<html>
+
+</html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .CardForm {
+            margin-left: 400px;
+            margin-top: 100px;
+            display: flex;
+            padding: 30px 30px 30px 30px;
+            align-content: center;
+            justify-content: center;
+            background-color: #f5f5dc;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            width: 700px;
+
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: goldenrod;
+            line-height: 1.6;
+            margin: 10;
+            padding: 10;
+        }
+
+        h1 {
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: black;
+            background-color: #f5f5dc;
+            background: linear-gradient(to right);
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+        }
+
+        p {
+            text-align: center;
+            font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+            color: black;
+            list-style: none;
+            background-color: #f5f5dc;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+
+        }
+
+        .botão_cad {
+            align-content: center;
+            color: white;
+            background-color: green;
+            border-radius: 1px;
+        }
+
+        img {
+
+            max-width: 100%;
+            height: 400px;
+            display: block;
+            margin-right: 80px;
+
+        }
+    </style>
+</head>
+
+<body onload="formlogin.login.focus()">
+
+    <h1>APOLLO STORE</h1>
+    <p>DIGITE SUAS INFORMAÇÕES PARA ACESSAR O SITE</p>
+    
+
+    <form action="login.jsp" name="formlogin" method="POST">
+
+        <input type="hidden" name=oper id="idOper">
+
+        <div class="CardForm">
+
+            <table>
+                <tr>
+                    <td>
+                        Nome:
+                    </td>
+                    <td>
+                        <input type="text" name="nome" placeholder="Nome" required>
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        Login:
+                    </td>
+                    <td>
+                        <input type="text" name="email" placeholder="Email" required>
+                    </td>
+                </tr>
+                <br>
+                <tr>
+                    <td>
+                        Senha:
+                    </td>
+                    <td>
+                        <input type="password" name="senha" placeholder="Senha" required>
+                    </td>
+                    <br>
+                </tr>
+                <td>
+                    Celular:
+                </td>
+                <td>
+                    <input type="tel" name="celular" placeholder="(XX) XXXXX-XXXX" pattern="\(\d{2}\) \d{5}-\d{4}">
+                </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type=button class="botão_cad" onclick="formlogin.oper.value = 'acessar';
+                            submit();" value="Cadastro">
+
+                    </td>
+                </tr>
+                <img src="img2.png" alt="Logo da Empresa">
+
+            </table>
+        </div>
+    </form>
+    <footer>
+        Todos os direitos reservados para Apollo
+    </footer>
+</body>
+
+</html>
